@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
-ratePerHour=8;
-x=$(( RANDOM % 3 ))
+ratePerHour=8; 
+empChecker=$(( RANDOM % 2 ))
 
-if [ $x == 0 ]; 
+if [ $empChecker == 0 ]; 
 then
 	workingHour=6;
 	echo "FullTimeEmployee present"
