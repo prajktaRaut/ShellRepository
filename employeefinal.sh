@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 ratePerHour=8;
-empCheck=$(( RANDOM % 2 ))
+empChecking=$(( RANDOM % 2 ))
 
-if [ $empCheck == 0 ]; 
+if [ $empChecking == 0 ]; 
 then
 	workingHour=6;
 	wage=$(( $ratePerHour*$workingHour ))
