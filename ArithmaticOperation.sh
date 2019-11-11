@@ -5,6 +5,9 @@ read -p "Enter First Input" x
 read -p "Enter Second Input" y
 read -p "Enter third Input" z
 
+declare -A computes
+
+
 	function sumOfTwoNumber
 	{
 		sum=$(($1 + $2))
@@ -38,9 +41,25 @@ read -p "Enter third Input" z
 
 	}
 
+		resultOfSum="$(sumOfTwoNumber $(($x)) $(($y)))"
+
+		resultofusecase3="$(multiplicationOfTwoNumber $(($y)) $(($z)))"
+		
+		resultOfUsecase4="$(divisionOfTwoNumber $(($x)) $(($y)))"
+
+		resultOfUsecase5="$(modOfTwoNumber $(($x)) $(($y)))"
+		
+		computes["operation1"]=$resultOfSum
+		computes["operation2"]=$resultofusecase3
+		computes["operation3"]=$resultOfUsecase4
+		computes["operation4"]=$resultOfUsecase5
 
 
-		equationResult="$(modOfTwoNumber $(($x)) $(($y)))"
+		echo "Result of addition is " ${computes["operation1"]}
+		echo "Result of multiplication is " ${computes["operation2"]}
+		echo "Result of division is " ${computes["operation3"]}
+                echo "Result of modification is " ${computes["operation4"]}
 
-		echo "Result of given equation is " $equationResult
+
+
 
