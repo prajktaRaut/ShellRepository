@@ -11,7 +11,16 @@ read -p "Enter third Input" z
 		echo $sum
 
 	}
-	
+
+		
+	function multiplicationOfTwoNumber
+	{
+		mul=$(($1 * $2))
+		result="$(sumOfTwoNumber $(($mul)) $(($x)))"
+		echo $result
+
+	}
+
 	function divisionOfTwoNumber
 	{
 		div=$(($1 / $2))
@@ -20,9 +29,18 @@ read -p "Enter third Input" z
 
 	}
 
+		
+	function modOfTwoNumber
+	{
+		mod=$(($1 % $2))
+		result="$(sumOfTwoNumber $(($mod)) $(($z)))"
+		echo $result
+
+	}
 
 
-		equationResult="$(divisionOfTwoNumber $(($x)) $(($y)))"
+
+		equationResult="$(modOfTwoNumber $(($x)) $(($y)))"
 
 		echo "Result of given equation is " $equationResult
 
