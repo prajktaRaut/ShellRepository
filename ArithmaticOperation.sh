@@ -12,15 +12,17 @@ read -p "Enter third Input" z
 
 	}
 	
-	function multiplicationOfTwoNumber
+	function divisionOfTwoNumber
 	{
-		mul=$(($1 * $2))
-		result="$(sumOfTwoNumber $(($mul)) $(($x)))"
+		div=$(($1 / $2))
+		result="$(sumOfTwoNumber $(($z)) $(($div)))"
 		echo $result
 
 	}
 
-		equationResult="$(multiplicationOfTwoNumber $(($y)) $(($z)))
+
+
+		equationResult="$(divisionOfTwoNumber $(($x)) $(($y)))"
 
 		echo "Result of given equation is " $equationResult
 
