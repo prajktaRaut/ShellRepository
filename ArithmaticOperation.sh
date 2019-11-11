@@ -21,8 +21,6 @@ read -p "Enter third Input" z
 	}
 
 		equationResult="$(multiplicationOfTwoNumber $(($y)) $(($z)))
-		result="$(calculateEquation $(($x)) $(($y)) $(($z)))"
-
 
 		echo "Result of given equation is " $equationResult
 
