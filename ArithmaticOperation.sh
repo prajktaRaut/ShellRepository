@@ -11,7 +11,7 @@ read -p "Enter third Input" z
 		echo $sum
 
 	}
-		result="$(calculateEquation $(($x)) $(($y) $(($z))))"
+		result="$(calculateEquation $(($x)) $(($y)) $(($z)))"
 
 		echo "Result of given equation is " $result
 
