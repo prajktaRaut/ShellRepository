@@ -1,20 +1,29 @@
-#!/bin/bash -x
+#!/bin/bash  -x
 
 ratePerHour=8;
-x=$(( RANDOM % 3 ))
+isPartTime=2;
+isFullTime=1;
+sum=0;
 
-if [ $x == 0 ]; 
-then
-	workingHour=6;
-	echo "employee present"
-elif [ $x == 1 ];
-then
-	workingHour=0;
-	echo "employee not present"
-else
-	workingHour=3;
- 	echo "parttime employee present"
+function myfunction
+{
+echo "number of working hours "$1;
+}
 
-fi
-	wage=$(( $ratePerHour*$workingHour ))
-	echo $wage
+       
+	checker=$(( RANDOM%3 ))
+	case $checker in 
+	$isFullTime)
+        	workingHour=6
+		;;
+	$isPartTime)
+        	workingHour=3
+       		;;
+	*)
+        	workingHour=0
+        	;;
+	esac
+	        result="$( myfunction $(( $workingHour )))"
+
+	echo $result
+
