@@ -5,18 +5,13 @@ read -p "Enter First Input" x
 read -p "Enter Second Input" y
 read -p "Enter third Input" z
 
-echo "first input is " $x
-echo "Second input is " $y
-echo "Third input is " $z
-
-
-	function sumOfTwoNumber
+	function calculateEquation
 	{
-		sum=$(($1 + $2))
+		sum=$(($1 + $2 * $3))
 		echo $sum
 
 	}
-		result="$(sumOfTwoNumber $(($x)) $(($y)))"
+		result="$(calculateEquation $(($x)) $(($y) $(($z))))"
 
-		echo "sum of First and Second input is " $result
+		echo "Result of given equation is " $result
 
