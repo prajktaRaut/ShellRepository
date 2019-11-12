@@ -62,4 +62,10 @@ declare -A computes
 
 
 
-
+		counter=0
+		for i in "${computes[@]}";
+		do
+			arrayElement[((counter++))]=$i
+		done
+		
+		echo "Array elements from dictonary is " ${arrayElement[@]}
